@@ -1,6 +1,8 @@
-# 1. Pega a imagem pública do Nginx (a casa vazia)
+# Usa a imagem oficial do Nginx (versão Alpine, mais leve)
 FROM nginx:alpine
 
-# 2. Pega os SEUS arquivos da pasta atual e joga pra dentro do Nginx
-COPY index.html /usr/share/nginx/html/
-COPY style.css /usr/share/nginx/html/
+# Copia TUDO da sua pasta atual para o diretório do Nginx
+COPY . /usr/share/nginx/html/
+
+# Expõe a porta 80 (padrão do Nginx)
+EXPOSE 80
