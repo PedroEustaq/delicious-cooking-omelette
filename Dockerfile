@@ -5,4 +5,4 @@ FROM nginx:alpine
 COPY . /usr/share/nginx/html/
 
 # Expõe a porta 80 (padrão do Nginx)
-EXPOSE 8080
+EXPOSE 80
